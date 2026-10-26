@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-white: 0 0% 100%;
+  --color-slate-50: 210 40% 98%;
+  --color-slate-100: 210 40% 96.1%;
+  --color-slate-200: 214 32% 91%;
+  --color-slate-300: 213 27% 84%;
+  --color-slate-400: 215 20% 65%;
+  --color-slate-500: 215 16% 47%;
+  --color-slate-600: 215 19% 35%;
+  --color-slate-700: 215 25% 27%;
+  --color-slate-800: 217 33% 17%;
+  --color-slate-900: 222 47% 11%;
+  --color-slate-950: 229 84% 5%;
+  --color-brand-50: 226 100% 96%;
+  --color-brand-100: 226 100% 94%;
+  --color-brand-500: 243 75% 59%;
+  --color-brand-600: 243 69% 52%;
+  --color-brand-700: 243 58% 41%;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-white: 222 47% 11%;
+  --color-slate-50: 222 47% 11%;
+  --color-slate-100: 217 33% 17%;
+  --color-slate-200: 215 25% 27%;
+  --color-slate-300: 215 19% 35%;
+  --color-slate-400: 215 16% 47%;
+  --color-slate-500: 215 20% 65%;
+  --color-slate-600: 213 27% 84%;
+  --color-slate-700: 214 32% 91%;
+  --color-slate-800: 210 40% 96.1%;
+  --color-slate-900: 210 40% 98%;
+  --color-slate-950: 0 0% 100%;
+}
+
+[data-theme='warm'] {
+  --color-white: 40 50% 97%;
+  --color-slate-50: 40 50% 97%;
+  --color-slate-100: 39 36% 92%;
+  --color-slate-200: 37 27% 85%;
+  --color-slate-300: 34 22% 76%;
+  --color-slate-400: 30 18% 63%;
+  --color-slate-500: 27 18% 48%;
+  --color-slate-600: 27 22% 37%;
+  --color-slate-700: 27 27% 29%;
+  --color-slate-800: 27 32% 21%;
+  --color-slate-900: 28 38% 14%;
+  --color-slate-950: 30 45% 9%;
+  --color-brand-50: 30 75% 92%;
+  --color-brand-100: 29 70% 85%;
+  --color-brand-500: 17 58% 42%;
+  --color-brand-600: 17 62% 35%;
+  --color-brand-700: 17 60% 28%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-slate-200 p-6;
+}
+
+.btn-primary {
+  @apply bg-brand-500 hover:bg-brand-600 text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-lg border border-slate-300 transition-colors;
+}
+
+.input-field {
+  @apply w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent;
+  background-color: hsl(var(--color-white));
+  color: hsl(var(--color-slate-900));
+}
